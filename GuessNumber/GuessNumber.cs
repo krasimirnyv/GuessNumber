@@ -10,7 +10,8 @@ class GuessNumber
             // Define levels and tries
             uint tries = 10;
             uint level = 1;
-            
+
+            Console.WriteLine($"You start with {tries} tries to guess the number!");
             bool isQuit = false;
             PlayGame(ref tries, ref level, guessedNumbers, ref isQuit); // Let's Play!
 
@@ -114,6 +115,7 @@ class GuessNumber
             }
             
             tries = 10 + (level * 2);
+            Console.WriteLine($"Now you have {tries} tries to guess the number!");
             computerNumber = GenerateComputerNumber(level);
             
             Console.WriteLine($"Guessed numbers so far: {string.Join(", ", guessedNumbers)}");
