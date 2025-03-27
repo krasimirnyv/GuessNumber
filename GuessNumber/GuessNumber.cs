@@ -11,12 +11,17 @@ class GuessNumber
             uint tries = 10;
             uint level = 1;
             
-            PlayGame(ref tries, ref level, guessedNumbers); // Let's Play!
+            bool isQuit = false;
+            PlayGame(ref tries, ref level, guessedNumbers, ref isQuit); // Let's Play!
 
             if (guessedNumbers.Count > 0)
             {
+                Console.WriteLine($"Guessed numbers: {string.Join(", ", guessedNumbers)}.");
+            }
+            
+            if (isQuit)
+            {
                 Console.WriteLine($"Thanks for playing Guess a Number!\n" +
-                                  $"Guessed numbers: {string.Join(", ", guessedNumbers)}.\n" +
                                   $"See you soon! :)");
                 return;
             }
@@ -24,7 +29,7 @@ class GuessNumber
             Console.Write($"Sorry, you lost :(\n" + 
                           $"Do you want to try again? [y / n]: ");
 
-            bool answerAfterLost = PlayerAnswerAfterLost(guessedNumbers);
+            bool answerAfterLost = PlayerAnswer(guessedNumbers);
             if (answerAfterLost)
             {
                 return;
@@ -32,7 +37,7 @@ class GuessNumber
         }
     }
     
-    private static void PlayGame(ref uint tries, ref uint level, List<ulong> guessedNumbers)
+    private static void PlayGame(ref uint tries, ref uint level, List<ulong> guessedNumbers, ref bool isQuit)
     {
         ulong computerNumber = GenerateComputerNumber(level); // Generate randomly the computer number
 
@@ -43,7 +48,6 @@ class GuessNumber
                 string playerInput = GetPlayerInput(level); // Gets the player's input
                 ulong playerNumber = InputValidator(playerInput); // Validates the player's input as an integer number
                 
-                bool isQuit = false;
                 GameActon(ref tries, ref level, playerNumber, ref computerNumber, guessedNumbers, ref isQuit); // Let's dive into the game
 
                 if (isQuit)
@@ -102,7 +106,7 @@ class GuessNumber
             Console.ResetColor();
             Console.Write($"Do you want to level up - next level: {++level}? [y / n]: ");
 
-            bool answer = PlayerAnswerBeforeLevelUp();
+            bool answer = PlayerAnswer();
             if (answer)
             {
                 isQuit = true;
@@ -128,7 +132,7 @@ class GuessNumber
         Console.ResetColor();
     }
     
-    private static bool PlayerAnswerBeforeLevelUp()
+    private static bool PlayerAnswer() // before level up
     {
         string answer = default;
         while ((answer = Console.ReadLine().ToLower()) != "yes" && answer != "y" 
@@ -147,7 +151,7 @@ class GuessNumber
         return false;
     }
     
-    private static bool PlayerAnswerAfterLost(List<ulong> guessedNumbers)
+    private static bool PlayerAnswer(List<ulong> guessedNumbers) // after losing the game
     {
         string answer = default;
         while ((answer = Console.ReadLine().ToLower()) != "yes" && answer != "y" 
