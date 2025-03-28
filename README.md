@@ -102,7 +102,7 @@ You can view the source code for this project here:
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Try the Demo
 You can play the game directly in your web browser here:
 
 <a href="https://replit.com/@krasimirnyv/GuessTheNumber" target="_blank">
