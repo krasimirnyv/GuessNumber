@@ -22,7 +22,7 @@ This project allows the practice of core programming skills such as:
 
 ---
 
-## ✅ Solution
+## ✅ My Solution
 The solution is implemented using native **C#/.NET** without any external libraries. Key aspects:
 
 - **Random number generation:** `System.Random` is used to create the secret number each round.
