@@ -9,6 +9,14 @@ A C# console-based number guessing game with difficulty levels, retry logic, inp
 
 ---
 
+## 🧩 Project Summary
+
+A simple C# console game where the player tries to guess a randomly generated number within a limited number of tries.  
+With each correct guess, the difficulty increases by raising the number range and available attempts.  
+The game includes input validation, colored feedback, level progression, and the ability to replay or quit at any point.
+
+---
+
 ## 📌 Project Goals
 The goal of this project is to implement a number guessing game in the console, where the computer randomly generates a number and the player has to guess it within a limited number of tries. With each successful guess, the player levels up, and the number range and difficulty increase.
 
