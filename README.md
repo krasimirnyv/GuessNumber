@@ -97,7 +97,7 @@ You can view the source code for this project here:
 ## 🚀 Live Demo
 You can play the game directly in your web browser here:
 
-<a href="https://replit.com/@krasimirnyv/Guess-the-Number-Game-by-Krasmir-Naydenov?v=1" target="_blank">
+<a href="https://replit.com/@krasimirnyv/GuessTheNumber" target="_blank">
   <img alt="Play Button" src="images/Play.png" width="100">
 </a>
 
