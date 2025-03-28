@@ -72,17 +72,17 @@ The solution is implemented using native **C#/.NET** without any external librar
 
 <p align="center">
   <img src="images/Finishing two levels than quit.jpg" width="500" alt="Finishing two levels and quitting">
-  <br><em>Example 4: Player successfully finishes two levels, then chooses to quit</em>
+  <br><em>Example 1: Player successfully finishes two levels, then chooses to quit</em>
 </p>
 
 <p align="center">
   <img src="images/Playing again after losing.jpg" width="500" alt="Playing again after losing">
-  <br><em>Example 5: Player loses, then chooses to play again and continues</em>
+  <br><em>Example 2: Player loses, then chooses to play again and continues</em>
 </p>
 
 <p align="center">
   <img src="images/Starts with invalid input then run out of tries.jpg" width="500" alt="Invalid input and running out of tries">
-  <br><em>Example 6: Player enters invalid input, then runs out of tries</em>
+  <br><em>Example 3: Player enters invalid input, then runs out of tries</em>
 </p>
 
 ---
